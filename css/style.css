@@ -1,0 +1,9 @@
+#flex_main{
+    gap:1%;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+#flex_main > div{
+    margin: 1%;
+}
