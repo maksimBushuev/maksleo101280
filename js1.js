@@ -1,5 +1,6 @@
 // Инициализация WebApp
 // const tg = window.Telegram.WebApp;
+alert("привет");
 alert(window.Telegram.WebApp.initData);
 
 // // Расширяем на весь экран (опционально)
@@ -15,6 +16,7 @@ alert(window.Telegram.WebApp.initData);
 // } else {
 //     console.log("Данные пользователя не найдены (возможно, запуск вне Telegram)");
 // }
+
 
 
 
