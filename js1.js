@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Инициализация
-    const tg = window.Telegram.WebApp;
-    tg.ready();
-
-    // Выводим в alert для теста (увидишь сразу при открытии)
-    if (!tg.initDataUnsafe || Object.keys(tg.initDataUnsafe).length === 0) {
-        alert("Данные не получены. Открой приложение строго через бота!");
-    } else {
-        const user = tg.initDataUnsafe.user;
+    // Проверяем, загрузился ли объект Telegram вообще
+    if (window.Telegram && window.Telegram.WebApp) {
+        const tg = window.Telegram.WebApp;
+        tg.ready();
+        
+        const user = tg.initDataUnsafe?.user;
         if (user) {
-            document.getElementById('first_name').innerText = user.first_name;
-            console.log("Данные юзера:", user);
+            console.log("Успех! Имя:", user.first_name);
         } else {
-            alert("Объект user пуст, хотя initData есть.");
+            console.log("Приложение запущено не через Telegram");
         }
+    } else {
+        console.error("SDK Telegram не загружен! Проверь интернет или путь к скрипту.");
     }
 });
