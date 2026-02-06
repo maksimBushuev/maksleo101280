@@ -1,16 +1,18 @@
-// Инициализация Telegram Web App
-        const tg = window.Telegram.WebApp;
+document.addEventListener("DOMContentLoaded", function() {
+    // Инициализация
+    const tg = window.Telegram.WebApp;
+    tg.ready();
 
-        // Сообщаем Telegram, что приложение готово
-        tg.ready();
-
-        // Получаем данные пользователя
-        const user = tg.initDataUnsafe?.user;
-
+    // Выводим в alert для теста (увидишь сразу при открытии)
+    if (!tg.initDataUnsafe || Object.keys(tg.initDataUnsafe).length === 0) {
+        alert("Данные не получены. Открой приложение строго через бота!");
+    } else {
+        const user = tg.initDataUnsafe.user;
         if (user) {
             document.getElementById('first_name').innerText = user.first_name;
-            document.getElementById('user_id').innerText = user.id;
-            document.getElementById('username').innerText = user.username || 'не указан';
+            console.log("Данные юзера:", user);
         } else {
-            document.getElementById('user-card').innerText = "Данные не найдены (запустите через Telegram)";
+            alert("Объект user пуст, хотя initData есть.");
         }
+    }
+});
