@@ -1,20 +1,21 @@
 // Инициализация WebApp
-const tg = window.Telegram.WebApp;
+// const tg = window.Telegram.WebApp;
 alert(window.Telegram.WebApp.initData);
 
-// Расширяем на весь экран (опционально)
-tg.expand();
+// // Расширяем на весь экран (опционально)
+// tg.expand();
 
-// Получаем данные пользователя
-const user = tg.initDataUnsafe?.user;
+// // Получаем данные пользователя
+// const user = tg.initDataUnsafe?.user;
 
-if (user) {
-    console.log(`ID: ${user.id}`);
-    console.log(`Имя: ${user.first_name}`);
-    console.log(`Username: ${user.username}`);
-} else {
-    console.log("Данные пользователя не найдены (возможно, запуск вне Telegram)");
-}
+// if (user) {
+//     console.log(`ID: ${user.id}`);
+//     console.log(`Имя: ${user.first_name}`);
+//     console.log(`Username: ${user.username}`);
+// } else {
+//     console.log("Данные пользователя не найдены (возможно, запуск вне Telegram)");
+// }
+
 
 
 
