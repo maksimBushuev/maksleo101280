@@ -1,7 +1,5 @@
 // Инициализация WebApp
 // const tg = window.Telegram.WebApp;
-alert("привет");
-alert(window.Telegram.WebApp.initData);
 
 // // Расширяем на весь экран (опционально)
 // tg.expand();
@@ -16,6 +14,14 @@ alert(window.Telegram.WebApp.initData);
 // } else {
 //     console.log("Данные пользователя не найдены (возможно, запуск вне Telegram)");
 // }
+// Теперь это должно сработать
+        const tg = window.Telegram.WebApp;
+        
+        if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+            alert("Привет, " + tg.initDataUnsafe.user.first_name);
+        } else {
+            alert("Библиотека загружена, но данных нет. Открой сайт через кнопку в боте!");
+        }
 
 
 
