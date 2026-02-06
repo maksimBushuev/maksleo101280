@@ -14,6 +14,7 @@ if (user) {
 } else {
     console.log("Данные пользователя не найдены (возможно, запуск вне Telegram)");
 }
-alert(JSON.stringify(window.Telegram.WebApp.initDataUnsafe));
+alert(window.Telegram.WebApp.initData);
+
 
 
