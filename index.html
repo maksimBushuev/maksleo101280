@@ -20,12 +20,13 @@
     </div>
 
     <div style="margin-left:70px">
-        <div id="home" class="w3-container w3-center w3-green w3-padding-16">
-            <h1>Личный кабинет</h1>
-            <div id="user-card">
-                <p>Привет, <span id="first_name">...</span>!</p>
-                <p>Твой ID: <span id="user_id">...</span></p>
-                <p>Username: @<span id="username">...</span></p>
+        <div class="user-card" id="card">
+            <h1 id="welcome">Загрузка...</h1>
+            <div id="user-info" style="display: none;">
+                <p>Ваш ID: <span id="user-id" class="highlight"></span></p>
+                <p>Username: <span id="user-username" class="highlight"></span></p>
+                <p>Язык: <span id="user-lang" class="highlight"></span></p>
+            </div>
         </div>
         </div>
         <div id="flex_main" class="w3-flex">
@@ -48,5 +49,6 @@
 <script src="/js1.js"></script>
 
 </html>
+
 
 
