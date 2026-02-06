@@ -1,14 +1,18 @@
-window.onload = function() {
-    const tg = window.Telegram.WebApp;
-    tg.ready();
+// Инициализация WebApp
+const tg = window.Telegram.WebApp;
 
-    const rawData = JSON.stringify(tg.initDataUnsafe, null, 2);
-    
-    // Выведет на экран всё содержимое объекта данных
-    document.body.innerHTML = '<pre style="word-wrap: break-word; white-space: pre-wrap;">' + rawData + '</pre>';
-    
-    if (!tg.initDataUnsafe.user) {
-        alert("Telegram не передал объект user! Проверь метод запуска.");
-    }
-};
+// Расширяем на весь экран (опционально)
+tg.expand();
+
+// Получаем данные пользователя
+const user = tg.initDataUnsafe?.user;
+
+if (user) {
+    console.log(`ID: ${user.id}`);
+    console.log(`Имя: ${user.first_name}`);
+    console.log(`Username: ${user.username}`);
+} else {
+    console.log("Данные пользователя не найдены (возможно, запуск вне Telegram)");
+}
+
 
