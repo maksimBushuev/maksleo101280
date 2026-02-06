@@ -19,24 +19,14 @@
             document.getElementById('welcome').innerText = "Ошибка: Данные не найдены!";
         }
 
-
-
 // // Теперь это должно сработать
 //         const tg = window.Telegram.WebApp;
         
 //         if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
 //             alert("Привет, " + tg.initDataUnsafe.user.first_name);
+
 //         } else {
 //             alert("Библиотека загружена, но данных нет. Открой сайт через кнопку в боте!");
 //         }
-
-
-
-
-
-
-
-
-
 
 

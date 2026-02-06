@@ -20,14 +20,35 @@
     </div>
 
     <div style="margin-left:70px">
-        <div class="user-card" id="card">
-            <h1 id="welcome">Загрузка...</h1>
-            <div id="user-info" style="display: none;">
-                <p>Ваш ID: <span id="user-id" class="highlight"></span></p>
-                <p>Username: <span id="user-username" class="highlight"></span></p>
-                <p>Язык: <span id="user-lang" class="highlight"></span></p>
+        <div id="card" class="w3-card-4 w3-round-xlarge tg-secondary-bg w3-margin">
+        
+            <header class="w3-container w3-center w3-padding-16">
+                <h1 id="welcome" class="w3-large w3-opacity"><b>Загрузка...</b></h1>
+            </header>
+
+            <div id="user-info" class="w3-container" style="display: none;">
+                <ul class="w3-ul w3-border-0 w3-white w3-round-large w3-margin-bottom">
+                    <li class="w3-padding">
+                        <span>ID:</span>
+                        <b id="user-id" class="w3-right w3-text-blue"></b>
+                    </li>
+                    <li class="w3-padding">
+                        <span>Username:</span>
+                        <b id="user-username" class="w3-right w3-text-blue"></b>
+                    </li>
+                    <li class="w3-padding">
+                        <span>Язык:</span>
+                        <b id="user-lang" class="w3-right w3-text-blue"></b>
+                    </li>
+                </ul>
+
+                <div class="w3-padding-16">
+                    <button onclick="window.Telegram.WebApp.close()" 
+                            class="w3-button w3-block w3-round-large w3-blue w3-hover-light-blue">
+                        Закрыть
+                    </button>
+                </div>
             </div>
-        </div>
         </div>
         <div id="flex_main" class="w3-flex">
             <div class="w3-padding w3-black"><h3>1</h3></div>
@@ -47,8 +68,4 @@
 </body>
 <script src="js/w3js.js"></script>
 <script src="/js1.js"></script>
-
 </html>
-
-
-
